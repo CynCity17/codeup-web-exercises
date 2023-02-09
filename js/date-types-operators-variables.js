@@ -1,5 +1,7 @@
 let a = 1;
+//a = 1
 let b = a++;
+//b = 1, a = 2
 let c = ++a;
 // a = 3, b = 1, c = 3
 console.log(a);
@@ -9,7 +11,9 @@ console.log(c);
 let d = "hello";
 let e = false;
 d++;
+//d = NaN
 e++;
+//1 (0 is falsey so javascript thinks you're trying to increment from 0)
 
 let perplexed;
 perplexed + 2;
@@ -17,40 +21,52 @@ console.log(perplexed + 2);
 
 let price = 2.7;
 price.toFixed(2);
-//2.70
+//"2.70"
 console.log(price.toFixed(2));
 
 let price2 = "2.7";
 price.toFixed(2);
-//only runs numbers
+//error becuase .toFixed can only run numbers
 console.log(price2);
 
 isNaN(0);
 //false
+
 isNaN(1);
 //false
+
 isNaN("");
-//true
+//false ; undefined is falsey thus = to 0
+
 isNaN("string");
 //true
+
 isNaN("0");
-//false
+//false ; cohersed into a number
+
 isNaN("1");
-//false
+//false ; cohersed into a number
+
 isNaN("3.145");
-//false
+//false ; coheresed into a number
+
 isNaN(Number.MAX_VALUE);
-//false
+//false ; max value is the highest number javascript can count so still a number
+
 isNaN(Infinity);
-//false
+//false; still considered a number as it is infinte
+
 isNaN("true");
 //true
+
 isNaN(true);
-//false
+//false ; true is considered a truthy value which is = 1
+
 isNaN("false");
 //true
 isNaN(false);
-//false
+//false ; false is considered a falsey value which is = 0
+
 NaN == NaN;
 
 !true;
@@ -66,7 +82,7 @@ NaN == NaN;
 //false
 
 !!0;
-//true
+//false
 
 !!-0;
 //false
