@@ -120,6 +120,7 @@ console.log(sample);
 // console.log(message);
 // console.log("This user's guild is => ", guildName);
 // console.log("This user's name is => ", discordName);
+
 let rentMovie = 3
 let mermaid = (3 * rentMovie);
 let brotherBear = (5 * rentMovie);

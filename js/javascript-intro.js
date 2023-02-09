@@ -68,3 +68,23 @@ let pie = 3.14;
 // console.log(discordName.length);
 // discordName = discordName.toLowerCase();
 // discordName =.replace('[yolo]', '');
+
+// let user = "Jason";
+// let dontLike = "jason";
+// let message = "i don't like you! go away!";
+// message = message.toUpperCase();
+// if(user.toLowerCase() ===dontLike.toLowerCase()) {
+//     console.log(message);
+// } else {
+//     console.log("Not Jason, you're cool.");
+// }
+
+// let discordName = "[YoLoBlob]Jason";
+// let guildCharEnd = discordName.indexOf(']') + 1;
+// let guildName = discordName.substring(0, guildCharEnd);
+// discordName = discordName.substring(guildCharEnd);
+// let message = `The user's name is ${discordName}.
+// And they are a member of the ${guildName} guild.`;
+// console.log(message);
+// console.log("This user's guild is => ", guildName);
+// console.log("This user's name is => ", discordName);
