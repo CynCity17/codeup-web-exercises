@@ -6,15 +6,28 @@ alert("Welcome to my Website!");
 
 let color = prompt("What is your favorite color?");
 console.log(color);
-
 alert(`Great! ${color} is my favorite color too!`);
+
+// CLASS EXAMPLE
+// let priceInput = prompt('How much does a movie cost per day?');
+// let pricePerDay = parseFloat(priceInput);
+// let movieInput = prompt('How many days did you rent Little Mermaid?');
+// let movie1 = parseFloat(movieInput);
+// let movieInput2 = prompt('How many days did you rent Brother Bear?');
+// let movie2 = parseFloat(movieInput2);
+// let movieInput3 = prompt('How many days did you rent Hercules?');
+// let movie3 = parseFloat(movieInput3);
+// let totalMovieCost = pricePerDay * (movie1 + movie2 + movie3);
+// alert(`The total cost of your rentals is ${totalMovieCost.toLocaleString("en-US", {style:"currency", currency:"USD"})}`);
 
 let howManyDays = prompt(`How many days total did you rent?
 (Total meaning all the days per movie
-EX: little mermaid - 3 days
+EX:
+little mermaid - 3 days
 brother bear - 5 days
 hercules - 1 day
-Total of 9 days - Enter 9)`);
+Total of 9 days
+Enter: 9)`);
 console.log(howManyDays);
 alert(`Your total cost for your rentals is: $${3 * howManyDays}`);
 
@@ -45,7 +58,8 @@ if(canEnroll) {
 }
 
 let minCartSize = 2;
-let cartSize = 3;
+let cartSize = parseInt( prompt('How many items did you purchase?') );
+console.log(cartSize);
 let arePremium = confirm(`If premium member click "ok".
 If not premium member click "cancel".`);
 console.log(arePremium);
