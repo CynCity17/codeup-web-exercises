@@ -195,7 +195,7 @@ let currentClassSize = 24;
 let canEnroll = !scheduleConflicts && currentClassSize < maxClassSize;
 console.log(canEnroll);
 
-let classNotFull = true
+let classNotFull = true //the one i did
 let doesNotConflict = true
 let message = "Enrolled!"
 if(classNotFull === doesNotConflict) {
