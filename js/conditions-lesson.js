@@ -1,14 +1,14 @@
 "use strict";
 
-// let flavor = prompt("Welcome to Codeup Ice Cream! What flavor do you want?");
+let flavor = prompt("Welcome to Codeup Ice Cream! What flavor do you want?");
 
-// if (flavor === "chocolate"){
-//     alert("One chocolate coming right up!");
-// } else if (flavor === "vanilla") {
-//     alert("One vanilla coming right up!");
-// } else {
-//     alert("We don't have tht flavor, sorry :(")
-// }
+if (flavor === "chocolate"){
+    alert("One chocolate coming right up!");
+} else if (flavor === "vanilla") {
+    alert("One vanilla coming right up!");
+} else {
+    alert("We don't have tht flavor, sorry :(")
+}
 
 //switch statements are only good for functions that are matching values
 // switch (flavor.toLowerCase()) {
@@ -19,7 +19,7 @@
 //         alert("One vanilla coming right up!");
 //         break;
 //     case("strawberry"):
-//         aler("One strawberry coming right up!");
+//         alert("One strawberry coming right up!");
 //         break;
 //     default:
 //         alert("We don't have that flavor, sorry :(");
