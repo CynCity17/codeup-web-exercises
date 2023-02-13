@@ -29,8 +29,9 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-let myName = "Cynthia";
-sayHello(myName);
+const myName = "Cynthia";
+const helloMessage = sayHello(myName);
+console.log(helloMessage);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -73,6 +74,15 @@ console.log(isTwo(random));
 const calculateTip = (num1, num2) => {
     return(num1 * num2);
 }
+
+//CLASS EXAMPLE
+//const calculateTip = (tipPercentage, billTotal) => {
+//    let tipPercentageNum = parseFloat(tipPercentage);
+//    let billTotalNum = parseFloat(billTotal);
+//    let amountToTip = (tipPercentageNum / 100) * billTotalNum;
+//    return amountToTip;
+//}
+
 console.log(calculateTip(0.20, 20));
 console.log(calculateTip(0.25, 25.50));
 console.log(calculateTip(0.15, 33.42));
