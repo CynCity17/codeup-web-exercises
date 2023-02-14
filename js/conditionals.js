@@ -21,6 +21,7 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+
 // function analyzeColor(color) {
 //     if (color === 'blue'){
 //     return("Blue is the color of the ocean!");
@@ -29,44 +30,56 @@
 // } else {
 //     return("We don't care about that color :(")
 // }}
+
 // console.log(analyzeColor('blue'));
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
+
+/**Don't change the next two lines!
+* These lines create two variables for you:
+* - `colors`: a list of the colors of the rainbow
+* - `randomColor`: contains a single random color value from the list (this
+*   will contain a different color every time the page loads)**/
+
+//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+/** TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
- */
+ **/
+
 //console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
- */
+ **/
 
-// switch (analyzeColor.toLowerCase(color)) {
-//     case("blue"):
-//         message ("Blue is the color of the ocean!");
+// function analyzeColor(color){
+//     switch (color){
+//     case "blue":
+//         return ("Blue is the color of the ocean!");
 //         break;
-//     case("green"):
-//         message ("Green is the color of Codeup!");
+//     case "green":
+//         return ("Green is the color of Codeup!");
 //         break;
-//     case("pink"):
-//         message ("Pink is the color of the Barbie logo!");
+//     case"pink":
+//         return ("Pink is the color of the Barbie logo!");
 //         break;
 //     default:
-//         message ("We don't care about that color! :(");
-// }
+//         return ("We don't care about that color! :(");
+// }}
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+//CLASS EXAMPLE: ENDS UP USING THE ABOVE CODE INSTEAD OF A SEPARATE KIND OF FUNCTION
+// const userColor = prompt("Please enter a color");
+// alert(analyzeColor(userColor.toLowerCase()));
+
 // let color = prompt("Name a color:");
 // if (color === "blue"){
 //     alert("Blue is the color of the ocean!");
@@ -96,48 +109,50 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-let luckyNumber = Math.floor(Math.random() * 6);
-const calculateTotal = (luckyNumber, totalAmount) => {
-    if (luckyNumber === 0){
-    return totalAmount;
-} else if (luckyNumber === 1){
-    return (totalAmount - (totalAmount * .1));
-} else if (luckyNumber === 2){
-    return (totalAmount - (totalAmount * .25));
-} else if (luckyNumber === 3){
-    return (totalAmount - (totalAmount * .35));
-} else if (luckyNumber === 4){
-    return (totalAmount - (totalAmount * .5));
-} else if (luckyNumber === 5){
-    return (totalAmount - totalAmount);
-}}
+// const calculateTotal = (luckyNumber, totalAmount) => {
+//     if (luckyNumber === 0){
+//     return totalAmount;
+// } else if (luckyNumber === 1){
+//     return (totalAmount - (totalAmount * .1));
+// } else if (luckyNumber === 2){
+//     return (totalAmount - (totalAmount * .25));
+// } else if (luckyNumber === 3){
+//     return (totalAmount - (totalAmount * .35));
+// } else if (luckyNumber === 4){
+//     return (totalAmount - (totalAmount * .5));
+// } else if (luckyNumber === 5){
+//     return (totalAmount - totalAmount);
+// }}
 
-let totalAmount = parseInt(prompt(`What is your total?`));
-switch (calculateTotal(luckyNumber)) {
-    case(0):
-        alert(`Your lucky number is: ${luckynumber}, and your total is ${totalAmountInput - (totalAmountInput) isBlue is the color of the ocean!");
-        break;
-    case(1):
-        message ("Green is the color of Codeup!");
-        break;
-    case(2):
-        message ("Pink is the color of the Barbie logo!");
-        break;
-    case(3):
-        message ("Green is the color of Codeup!");
-        break;
-    case(4):
-        message ("Pink is the color of the Barbie logo!");
-        break;
-    case(5):
-        message ();
-        break;
-    default:
-        message ("We don't care about that color! :(");
-}
 // console.log(calculateTotal(0, 100));
 // console.log(calculateTotal(4, 100));
 // console.log(calculateTotal(5, 100));
+
+// let luckyNumber = Math.floor(Math.random() * 6);
+// let totalAmount = parseFloat(prompt(`What is your total?`));
+// switch (luckyNumber) {
+//     case(0):
+//         alert(`Your lucky number is: ${luckyNumber}, and your total is ${totalAmount}. Sorry you didn't get a discount!`);
+//         break;
+//     case(1):
+//         alert(`Your lucky number is: ${luckyNumber}, and your total is ${totalAmount}, with the discount your new total is: ${calculateTotal(luckyNumber, totalAmount)}`);
+//         break;
+//     case(2):
+//         alert(`Your lucky number is: ${luckyNumber}, and your total is ${totalAmount}, with the discount your new total is: ${calculateTotal(luckyNumber, totalAmount)}`);
+//         break;
+//     case(3):
+//         alert(`Your lucky number is: ${luckyNumber}, and your total is ${totalAmount}, with the discount your new total is: ${calculateTotal(luckyNumber, totalAmount)}`);
+//         break;
+//     case(4):
+//         alert(`Your lucky number is: ${luckyNumber}, and your total is ${totalAmount}, with the discount your new total is: ${calculateTotal(luckyNumber, totalAmount)}`);
+//         break;
+//     case(5):
+//         alert(`Your lucky number is: ${luckyNumber}, and your total is ${totalAmount}, with the discount your new total is: $ 0 !`);
+//         break;
+//     default:
+//         alert(`There must be an error! Try again!`);
+// }
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -146,6 +161,7 @@ switch (calculateTotal(luckyNumber)) {
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
+//used it above
 // Generate a random number between 0 and 6
 //let luckyNumber = Math.floor(Math.random() * 6);
 
@@ -167,3 +183,21 @@ switch (calculateTotal(luckyNumber)) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let confirmEnterNum = confirm("Would you like to enter a number?");
+switch (confirmEnterNum) {
+    case(confirmEnterNum === true):
+        let numberEntered = parseFloat(prompt(`Please enter your number:`));
+        console.log(numberEntered);
+        if (numberEntered % 2 === 0) {
+            alert('That number is even.');
+        } else {
+            alert('That number is odd.');
+        }
+            alert(`That number plus 100 is ${numberEntered + 100}.`);
+        if (numberEntered < 0) {
+            alert('That number is negative.');
+        } else if (numberEntered > 0) {
+                alert('That number is positive.');
+            } else {
+                alert('That number is neither positive or negative.');
+            }}
