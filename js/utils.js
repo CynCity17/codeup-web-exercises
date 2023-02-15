@@ -39,3 +39,8 @@ const buildPyramid = (rows) => {
 }
 
 buildPyramid(5);
+
+//Generates random numbers
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
