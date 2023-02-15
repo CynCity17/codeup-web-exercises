@@ -1,15 +1,30 @@
-function formatToLocaleString(number, language='en', country='US', currency='USD'){
-    return parseFloat(number).toLocaleString(`${language}-${country}`,
-        {style: 'currency', currency: currency}
-    );
+"use strict";
+
+// WHILE LOOP
+// let i = 1;
+// while (i <= 10) {
+//     console.log(`Loop #${i}`);
+//     i++;
+// }
+/**
+ *
+DO WHILE**/
+// do {
+//     console.log(`Loop #${i}`);
+//     i++;
+// } while (i <= 10)
+/**
+*
+FOR LOOP**/
+//for (let i = 1; i <= 10; i++) {
+//     console.log(`Loop #${i}`);
+//}
+
+for (let i = 1; i <= 10; i++) {
+     console.log(i);
 }
 
 
-function isNumericAndNotNaN(input){
-    return !isNaN(parseFloat(input)) && input !== null && typeof input !== "boolean" && typeof input !== "string";
-}
-
-/** Function for Factorials**/
 const getFactorial = num => {
     let result = 1;
     for (let i = 1; i <= num; i++) {
@@ -21,7 +36,7 @@ const getFactorial = num => {
 getFactorial(5);
 
 
-/**Building a Pyramid printed by lines**/
+
 const buildPyramid = (rows) => {
     //Loop through rows
     for(let i = 1; i <= rows; i++){

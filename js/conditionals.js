@@ -109,20 +109,20 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-// const calculateTotal = (luckyNumber, totalAmount) => {
-//     if (luckyNumber === 0){
-//     return totalAmount;
-// } else if (luckyNumber === 1){
-//     return (totalAmount - (totalAmount * .1));
-// } else if (luckyNumber === 2){
-//     return (totalAmount - (totalAmount * .25));
-// } else if (luckyNumber === 3){
-//     return (totalAmount - (totalAmount * .35));
-// } else if (luckyNumber === 4){
-//     return (totalAmount - (totalAmount * .5));
-// } else if (luckyNumber === 5){
-//     return (totalAmount - totalAmount);
-// }}
+const calculateTotal = (luckyNumber, totalAmount) => {
+    if (luckyNumber === 0){
+    return totalAmount;
+} else if (luckyNumber === 1){
+    return (totalAmount - (totalAmount * .1));
+} else if (luckyNumber === 2){
+    return (totalAmount - (totalAmount * .25));
+} else if (luckyNumber === 3){
+    return (totalAmount - (totalAmount * .35));
+} else if (luckyNumber === 4){
+    return (totalAmount - (totalAmount * .5));
+} else if (luckyNumber === 5){
+    return (totalAmount - totalAmount);
+}}
 
 // console.log(calculateTotal(0, 100));
 // console.log(calculateTotal(4, 100));
