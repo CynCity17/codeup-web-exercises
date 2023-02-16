@@ -1,3 +1,5 @@
+
+
 function formatToLocaleString(number, language='en', country='US', currency='USD'){
     return parseFloat(number).toLocaleString(`${language}-${country}`,
         {style: 'currency', currency: currency}
@@ -15,10 +17,9 @@ const getFactorial = num => {
     for (let i = 1; i <= num; i++) {
         result *= i;
     }
-    console.log(result);
     return result;
 }
-getFactorial(5);
+getFactorial();
 
 
 /**Building a Pyramid printed by lines**/
@@ -38,9 +39,13 @@ const buildPyramid = (rows) => {
     }
 }
 
-buildPyramid(5);
+buildPyramid();
 
 //Generates random numbers
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
+
+
