@@ -46,6 +46,16 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
+function arrayOfRandomNumbers(lenghtOfArray){
+    const array = [];
+    for(let i = 0; i < lenghtOfArray; i++){
+        let newRandomNumber = randomNumber(1, lenghtOfArray + 100);
+        while(array.includes(newRandomNumber)){
+            newRandomNumber = randomNumber(1, lenghtOfArray + 100);
+        }
+        array.push(newRandomNumber);
+    }
+    return array;
+}
 
 
