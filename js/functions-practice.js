@@ -101,46 +101,122 @@ const isZero = (number) =>{
 }
 // - Make a function named `notZero(input)` that returns true if the input is not
 // zero
-
+const notZero = (input) =>{
+    return (input !== 0);
+}
 // - Write a function named `lowerCase(string)`
+const lowerCase = (String) =>{
+    return String.toLowerCase();
+}
 // - Write a function named `double(n)` that returns a number times two
+const double = (n) =>{
+    return (n * 2);
+}
 // - Write a function named `triple(n)` that returns a number times 3
+const triple = (n) =>{
+    return (n * 3);
+}
 // - Write a function named `quadruple(n)` that returns a number times 4
+const quadruple = (n) =>{
+    return (n * 4);
+}
 // - Write a function named `half(n)` that returns 1/2 of the provided input
+const half = (n) =>{
+    return (n / 2);
+}
 // - Write a function named `subtract(a, b)` that returns `a` minus `b`
+const subtract = (a, b) =>{
+    return (a - b);
+}
 // - Write a function named `multiply(a, b)` that returns the product of `a` times
 //     `b`
+const multiply = (a, b) =>{
+    return (a * b);
+}
 // - Write a function named divide(a, b) that returns `a` divided by ~b~
+const divide = (a, b) =>{
+    return (a / b);
+}
 //     - Write a function named `remainder(a, b)` that returns the remainder after
 // dividing a by b
+const remainder = (a, b) =>{
+    return (a % b);
+}
 // - Make a function named `modulo(a, b)` that returns the returns the remainder
 // after dividing a by b
+const modulo = (a, b) =>{
+    return (a % b);
+}
 // - Write a function named `cube(n)` that returns n * n * n
+const cube = (n) =>{
+    return (n * n * n);
+}
 // - Write a function named `squareRoot(n)` that returns the square root of the
 // input
+const squareRoot = (n) =>{
+    return (Math.sqrt(n));
+}
 // - Write a function named `cubeRoot(n)` that returns the cube root of the input
+const cubeRoot = (n) =>{
+    return (Math.cbrt(n));
+}
 // - Write a function named `invertSign(number)` that returns a negative version of
 // a postive number, a positve version of negative, and false for all else.
+const invertSign = (number) => {
+    if (number > 0){
+        return (-Math.abs(number));
+    } else if (number < 0){
+        return (Math.abs(number));
+    } else {
+        return false;
+    }
+}
 // - Write a function named `degreesToRadians(number)`
+const degreesToRadians = (number) =>{
+    return (number * (Math.PI/180));
+}
 // - Write a function named `radiansToDegrees(number)`
+const radiansToDegrees = (number) =>{
+    return (number * (180/Math.PI));
+}
 // - Make a function named `isBlank(input)` that determines if a given input is
 // spaces, newline characters, or tabs.
+
 // - Make a function named `trim(string)` that removes empty spaces before and
 // after the input.
+const trim = (string) =>{
+    return (string.trim());
+}
 // - Make a function named `areEqual(input1, input2)` that returns if both inputs
 // have the same value
+const areEqual = (input1, input2) =>{
+    return (input1 == input2);
+}
 // - Make a function named `areIdentical(input1, input2)` that returns if both
 //     inputs are same value and data type.
+const areIdentical = (input1, input2) =>{
+    return (input1 === input2);
+}
 // - Make a function named `not(input)` returns the input with a flipped boolean
+const not = (input) =>{
+    return (!input);
+}
 // - Make a function named `notNot(input)` that the negation of the negation of the
 // input.
+const notNot = (input) =>{
+    return (input === input);
+}
 // - Make a function named `and(predicate1, predicate2)` that returns the logical
 // operation of AND
+
 // - Make a function named `or(predicate1, predicate2)` that returns the logical
 // operation of OR
+
 // - Write a function called `reverseString(string)` that reverses a string
+
 // - Make a function named `absoluteValue(number)` that returns the absolute value
 // of a number.
+
 // - Make a function named `rollDice(sides)` that takes in an argument containing
 // the number of sides the die should have. Generate a random number between 1 up
 // to and including the number of sides.
