@@ -1,4 +1,80 @@
-.fancy-header{
-    color: purple;
+* {
+    box-sizing:border-box;
+}
 
+img {
+    display: block;
+    max-width:100%;
+    width:100%;
+}
+
+main {
+    padding: 20px;
+}
+
+.fancy-header{
+    font-family: ;
+    color: purple;
+    text-align: center;
+}
+
+header{
+    padding: 20px;
+    border-bottom: 5px solid mediumvioletred;
+}
+
+.text-center{
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: cornflowerblue;
+}
+
+html {
+    background-color: #dafffc;
+    background-image: url(/images/clouds.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section li{
+    list-style: square;
+}
+
+.list-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid mediumvioletred;
+}
+body{
+    margin: 0px;
+    padding: 20px;
+    font-family: "Shadows Into Light";
+    font-size: xx-large;
+}
+
+.photos-container {
+    display:flex;
+    max-width:100vw;
+}
+
+.photo-container {
+    flex:1 0;
+    min-width:1px;
+    aspect-ratio: 4/3;
+}
+
+.photos-container .photo-container img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+table th{
+    padding: 15px;
+}
+
+table td{
+    padding: 15px;
 }
