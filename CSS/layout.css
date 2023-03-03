@@ -84,7 +84,7 @@
     flex-direction: row;
 }
 .column.shrink {
-    flex: 0 1 80px;
+    flex: 0 1 auto;
 }
 .column.text-center{
     text-align: center;

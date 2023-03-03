@@ -1,0 +1,202 @@
+.container{
+    flex-direction: row;
+}
+.nav-column{
+    height: 100vh;
+    text-align: right;
+    color: white;
+    width: 25%;
+}
+.twitter-Logo{
+    max-width: 15%;
+}
+.home{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.explore{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.notifications{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.messages{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.bookmarks{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.twitter-blue{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.profile{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.more{
+    display: block;
+    max-width: 100px;
+    text-align: start;
+    padding: 10px 0px 10px 50px;
+    color: #000;
+    font-size: 20px;
+}
+.tweet{
+    display: block;
+    max-width: 200px;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #29A8DF;
+    border: 1px solid #29A8DF;
+    border-radius: 30px;
+}
+
+.hero-column{
+    width: 50%;
+    height: 100vh;
+    border-left: 1px solid #f4f5f5;
+    border-right: 1px solid #f4f5f5;
+}
+.users-header{
+    line-height: 1;
+}
+.tweet-number{
+    color: #4E606E;
+}
+.profile-container{
+    padding-left: 10px;
+}
+.photo-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -100px;
+    padding: 20px 20px 20px 10px;
+}
+.profile-picture{
+    justify-self: start;
+    max-width: 35%;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: 5px solid #fff;
+}
+.photo-wrapper .edit-profile{
+    margin-bottom: 40px;
+}
+.edit-profile{
+    border: 1px solid #c4cdd2;
+    border-radius: 30px;
+    box-shadow: none;
+    font-weight: bold;
+    padding: 1px 10px 1px 10px;
+}
+.users-name{
+    line-height: .8;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.tag-name{
+    color: #4E606E;
+}
+.bio{
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+.location-column{
+    padding: 10px 0px 0px 10px;
+    display: flex;
+}
+.location-container img{
+    max-width: 5%;
+}
+.location-column2{
+    display: flex;
+    padding: 10px 0px 0px 14px;
+}
+.location-column2 img{
+    max-width: 17px;
+    max-height: 20px;
+}
+.date-joined{
+    padding-left: 5px;
+}
+.followers-column{
+    display: flex;
+    padding-left: 10px;
+}
+.followers{
+    padding-left: 5px;
+}
+.following a{
+    font-weight: bold;
+}
+.followers a{
+    font-weight: bold;
+}
+
+.interests-column{
+    width: 33%;
+    height: 100vh;
+    background-color: #76af4c;
+}
+
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
