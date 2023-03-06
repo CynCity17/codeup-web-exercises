@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+    <link rel="stylesheet" href="CSS/resets.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/forms-exercises.css">
+</head>
+<body>
+<form method="POST" action="https://request-inspector.glitch.me/">
+    <fieldset>
+        <legend><h4>Log In</h4></legend>
+        <div class="row">
+            <div class="column justify-center align-center">
+                <div class="input-wrapper">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><h4>BIO</h4></legend>
+        <div class="row">
+            <div class="column justify-center align-center">
+                <div class="input-wrapper">
+                    <textarea name="bio" id="bio" cols="5" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><h4>How did you hear about us?</h4></legend>
+        <div class="row">
+            <div class="column justify-center">
+                <div class="input-wrapper">
+                    <label for="billboard">Billboard:</label>
+                    <input type="checkbox" name="hearus" value="billboard" id="billboard">
+                </div>
+                <div class="input-wrapper">
+                    <label for="radioAd">Radio Ad:</label>
+                    <input type="checkbox" name="hearus" value="radioAd" id="radioAd">
+                </div>
+                <div class="input-wrapper">
+                    <label for="internet">Internet Ad:</label>
+                    <input type="checkbox" name="hearus" value="internet" id="internet">
+                </div>
+                <div class="input-wrapper">
+                    <label for="other">Other:</label>
+                    <input type="checkbox" name="hearus" value="other" id="other">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><h4><label for="browser">What web browser are you using?</label></h4></legend>
+            <select name="browser" id="browser">
+                <option value="Chrome">Chrome</option>
+                <option value="FireFox">FireFox</option>
+                <option value="Explorer">Explorer</option>
+                <option value="Safari">Safari</option>
+            </select>
+    </fieldset>
+</form>
+</body>
+</html>
