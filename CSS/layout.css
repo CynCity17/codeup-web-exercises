@@ -107,3 +107,6 @@
 .column.justify-end{
     justify-content: end;
 }
+.column.justify-bottom{
+    justify-content: end;
+}

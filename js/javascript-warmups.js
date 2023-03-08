@@ -253,3 +253,24 @@ function getBudgets(arrayOfObjects){
     arrayOfObjects.forEach(object => totalBudget += object.budget);
     return totalBudget;
 }
+
+
+
+function narcissistic(value) {
+    let x = 0;
+    let nx = 0
+    if (value < 9){
+        return true;// Code me to return true or false
+    } else {
+        if (value > 9) {
+            x = value.toString().split("")
+            for (let i = 0; i < x.length; i++) {
+                nx += Math.pow(Number(x[i]), x.length)
+            }
+            nx === value
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
