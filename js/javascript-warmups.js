@@ -393,6 +393,8 @@ const moreCars = [
 // Output the make, model, and mileage of every car with mileage less than 25thousand.
 // Write a function that takes in a car object and returns true or false depending on
 // whether its mileage is less than 50K. (true if less than 50K, false if more than 50K).
+// Want a more intense challenge? Sort the array alphabetically by make.
+
 
 for (let i = 0; i < moreCars.length; i++) {
     if (moreCars[i].make === "Ford") {
@@ -426,3 +428,19 @@ function isLess50K(moreCarsObject){
         return false;
     }
 }
+
+/** Class Example for sorting alphabetically**/
+function sortCarArray(carsArray){
+    return carsArray.sort((a,b) =>{
+        const el1 = a.make.toLowerCase();
+        const el2 = b.make.toLowerCase();
+        if (el1 < el2){
+            return -1;
+        } else if (el1 > el2){
+            return 1;
+        } else {
+            return 0;
+        }
+    })
+}
+/**End Example**/
