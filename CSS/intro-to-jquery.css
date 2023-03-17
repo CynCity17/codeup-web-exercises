@@ -1,0 +1,10 @@
+body{
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+h3{
+    width: fit-content;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
