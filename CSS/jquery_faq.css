@@ -5,3 +5,7 @@
 dd{
     color: hotpink;
 }
+
+h3{
+    cursor: pointer;
+}
