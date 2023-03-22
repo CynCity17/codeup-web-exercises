@@ -6,8 +6,8 @@
         let data = await response.json();
         return data;
     };
-        let inventoryInfo = await getInventory();
-        console.log(inventoryInfo);
+        let inventory = await getInventory();
+        console.log(inventory);
 
 
 
@@ -16,27 +16,25 @@
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    function renderInventory(inventoryInfo) {
-        let html = '<tbody id="insertProducts">';
-        html += '<h1>' + inventoryInfo.title + '</h1>';
-        html += '<p>' + inventoryInfo.quantity + '</p>';
-        html += '' + inventoryInfo.price + '';
-        html += '' + inventoryInfo.categories + '';
-        html += '</tbody>';
-        console.log(html)
-        return html;
+    const renderTool = (inventory) =>{
+        inventory.forEach(function(tool){
+            let row = document.createElement('tr');
+            row.innerHTML = `
+            <td>${tool.title}</td>
+            <td>${tool.quantity}</td>
+            <td>${formatToLocaleString(tool.price)}</td>
+            <td>${tool.categories.join(', ')}</td>
+        `;
+            document.querySelector('#insertProducts').appendChild(row);
+        });
     }
+    renderTool(inventory);
 
-    function renderInventory() {
-        let html = '';
-        for(let i = inventoryInfo.length - 1; i >= 0; i--) {
-            html += renderInventory([i]);
-        }
-        return html;
-    }
-
-
-
+    document.querySelector('#refreshTable').addEventListener('click', async function(){
+        document.querySelector('#insertProducts').innerHTML = '';
+        let inventory = await getInventory();
+        renderTool(inventory);
+    });
 
 
 })();
