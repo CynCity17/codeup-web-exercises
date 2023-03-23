@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Restaurant</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="CSS/resets.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/mapbox_maps_api.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column justify-center align-center text-center">
+                <h1>My Favorite Restaurants</h1>
+                <div id='map' style='width: 50%; height: 400px;'></div>
+            </div>
+        </div>
+    </div>
+        <div class="column">
+            <button id="hideMarkers">Hide The Markers</button>
+        </div>
+</div>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/mapbox_maps_api.js">d</script>
+<script>
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+        center: [139.75450, 35.68389], // starting position [lng, lat]
+        zoom: 12, // starting zoom
+    });
+
+
+    // let marker = new mapboxgl.Marker()
+    //     .setLngLat([139.73225, 35.66382])
+    //     .addTo(map);
+
+    const geojson = {
+        type: 'FeatureCollection',
+        features: [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [139.73225, 35.66382]
+                },
+                properties: {
+                    title: 'Ippudo Ramen',
+                    url: 'https://stores.ippudo.com/en/1014',
+                    description: 'Tokyo, Japan'
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [139.73225, 35.66290]
+                },
+                properties: {
+                    title: 'Ikinari Steak',
+                    url: 'http://ikinaristeak.com/for-foreign-visitors/',
+                    description: 'Tokyo, Japan'
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [139.77047, 35.69889]
+                },
+                properties: {
+                    title: 'Darumanome Akihabara',
+                    url: 'No url available',
+                    description: 'Tokyo, Japan'
+                }
+            }
+        ]
+    };
+
+/** CLASS EXAMPLE but using my inputs.......................does not work for what I have written so look at bigfoot web exercises
+geojson.forEach(feature=>{
+    const marker = new mapboxgl.Marker()
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
+    const popup = new mapboxgl.Popup()
+        .setHTML(`<h3>${feature.properties.title}</h3><p>${feature.properties.url}</p><p>${feature.properties.description}</p>`);
+    marker.setPopup(popup);
+}); **/
+
+    // add markers to map
+    for (const feature of geojson.features) {
+        // create a HTML element for each feature
+        const el = document.createElement('div');
+        el.className = 'marker';
+
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el)
+            .setLngLat(feature.geometry.coordinates)
+            .setPopup(
+                new mapboxgl.Popup({ offset: 25 }) // add popups
+                    .setHTML(
+                        `<h3>${feature.properties.title}</h3><p>${feature.properties.url}</p><p>${feature.properties.description}</p>`
+                    )
+            )
+            .addTo(map);
+
+    }
+</script>
+</body>
+</html>
