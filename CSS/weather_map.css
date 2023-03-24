@@ -11,9 +11,13 @@ body{
 }
 
 .header-container{
-    padding: 20px 70px;
+    padding: 20px 25px;
     background: rgba(106, 124, 150, 0.4);
     opacity: 70;
+}
+
+.header-container .row{
+    max-width: unset;
 }
 
 .current-weather{
@@ -61,11 +65,72 @@ body{
     padding: 20px;
     border-radius: 10px;
     margin: 10px 0;
+    max-width: 250px;
+     border: 1px solid white;
 }
 
 .weather-item div{
     display: inline-block;
-    justify-content: space-between;
 }
 
+.humidity{
+    margin-right: 119px;
+}
 
+.pressure{
+    margin-right: 138px;
+}
+
+.windSpeed{
+    margin-right: 94px;
+}
+
+.future-forecast .row{
+    width: unset;
+}
+.future-forecast{
+    background: rgba(24,24,27,0.8);
+    padding: 25px;
+    width: 100%;
+    justify-content: center;
+}
+
+.future-forecast .column{
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.future-forecast div{
+}
+
+.future-forecast .today{
+    align-items: center;
+    justify-content: center;
+}
+
+div .day{
+    font-size: 25px;
+}
+
+.future-forecast .today .temp, .weather-forecast-item .temp{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.future-forecast .today .day, .future-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #4ea7b4;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today, .weather-forecast .weather-forecast-item{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
