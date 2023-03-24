@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&display=swap');
+
+body{
+    background: url('/images/beach.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    font-family: Edu NSW ACT Foundation, sans-serif;
+    color: white;
+}
+
+.header-container{
+    padding: 20px 70px;
+    background: rgba(106, 124, 150, 0.4);
+    opacity: 70;
+}
+
+.current-weather{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 70px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+
+ .others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.weather-item div{
+    display: inline-block;
+    justify-content: space-between;
+}
+
+
