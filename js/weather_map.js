@@ -1,3 +1,4 @@
+
 const currentWeatherItemsE1 = document.querySelector('#current-weather-items');
 const timezone = document.querySelector('.time-zone');
 const countryElement = document.querySelector('#country');
@@ -21,6 +22,7 @@ const getFiveDayForecast = async (lat, long) => {
         console.log(error);
     }
 }
+
 function setFiveDayForecast(forecasts){
     let target = document.querySelector('#fiveDay');
     target.innerHTML = '';
@@ -40,6 +42,8 @@ function setFiveDayForecast(forecasts){
         target.appendChild(node);
     });
 }
+
+
 const getCurrentForecast = async (lat, long) => {
     try {
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${OPEN_WEATHER_API}`)
@@ -51,10 +55,10 @@ const getCurrentForecast = async (lat, long) => {
 }
 
 
-function setCurrentWeather(forecast){
+function setCurrentWeather(forecasts){
     let target = document.querySelector('#current-weather-items');
     target.innerHTML = '';
-    forecast.forEach(function(day){
+    forecasts.forEach(function(day){
         let node = document.createElement('div');
         node.classList.add('c-weather-item');
         node.innerHTML = `
@@ -96,9 +100,6 @@ async function getCurrentCoords() {
 }
 
 
-
-
-
 function setCurrentTime() {
     const timeE1 = document.querySelector('#time');
     const dateElement = document.querySelector('#date');
@@ -121,6 +122,7 @@ function setCurrentTime() {
 
     }, 1000);
 }
+
 
 (async () => {
    setCurrentTime();
