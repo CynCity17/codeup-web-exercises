@@ -113,8 +113,8 @@ div .day{
     font-size: 25px;
 }
 
-.future-forecast .today .temp, .weather-forecast-item .temp{
-    font-size: 30px;
+.future-forecast .today .text, .weather-forecast-item .text{
+    font-size: 20px;
     font-weight: 100;
 }
 

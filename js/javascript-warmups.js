@@ -445,3 +445,39 @@ function sortCarArray(carsArray){
 }
 /**End Example**/
 
+//THIS CALLS ON OUR UTILS FUNCTION FOR CHECKING IF ITS A NUMBER//
+function checkForNumber(input){
+    if (isNumericAndNotNaN(input)){
+        return "number";
+    }else{
+        return "not a number";
+    }
+}
+
+
+function sumOfElements(array){
+    let sum = 0;
+    //looping over the array, and for each number adding//
+    array.forEach(number => sum += number);
+    return sum;
+}
+
+//This loops over an array of objects and adds all the prices together//
+function totalPrice(arrayOfObjects){
+    let total = 0;
+    arrayOfObjects.forEach(object => total += object.price);
+    return total;
+}
+
+
+function findHighestPrice(arrayOfObjects){
+    const prices = [];
+    arrayOfObjects.forEach(object => prices.push(object.price));
+    //the ... is a spread operator//
+    return Math.max(...prices);
+}
+
+//uses total price function to check if the total of items is greater than or equal to 150//
+function discountCheck(object){
+    return object.clubMember || totalPrice(object.items) >= 150;
+}
