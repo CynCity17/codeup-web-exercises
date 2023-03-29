@@ -169,13 +169,81 @@ const users = [
 
 const emails = users.map(user => user.email);
 
-//Class example for forEach
+/** THIS is the same as above:
+const emails = users.map(user =>{
+ return user.email
+ }); **/
 
+/** Class example for forEach **/
 emails.forEach(email => console.log(email));
 
 //TODO: Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 
-const usersWithMoreThanThree = users.filter(user => user.languages.length >= 3);
+const usersWithAtLeastThree = users.filter(user => user.languages.length >= 3);
+
+/** the above is the same as:
+ * const usersWithAtLeastThree = users.filter(user =>{
+ *     return user.languages.length >= 3;
+ * }); **/
+
+//TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+
+const totalYears = users.reduce((acc, curr, index)=>{
+    return acc + curr.yearsOfExperience;
+    }, 0);
+
+let averageYears = totalYears / users.length;
+console.log(averageYears);
+
+const avgYears = users.reduce((acc, {yearsOfExperience: years})=>{
+    return acc + years;
+},0);
+
+
+// TODO: Use .reduce to get the longest email from the list of users.
+
+//This ends up returning the user object with the longest email, not just the email//
+const longestEmail = users.reduce((acc, user, index, array)=> acc.email.length > user.email.length ? acc : user);
+
+//THIS DOES ONLY THE LONGEST EMAIL//
+const longestEmail2 = users.reduce((acc, user)=>{
+    if(acc.length < user.email.length){
+        return user.email;
+    }else{
+        return acc;
+    }
+}, '')
+
+
+// TODO: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+//CREATES AN ARRAY OF THE INSTRUCTOR NAME//
+const listOfInstructors = users.reduce((acc, user)=>{
+    acc.push(user.name);
+    return acc;
+}, []);
+
+
+let instructors = users.reduce((acc, user, index)=>{
+    if(index + 1 === users.length){
+        return acc + `${user.name},`;
+    }else{
+        return acc + `${user.name}, `;
+    }
+}, 'Your instructors are: ');
+console.log(instructors);
+
+//TODO: Use .reduce to get the unique list of languages from the list of users.
+
+let uniqueLanguages = users.reduce((acc, user)=>{
+    user.languages.forEach(function (language){
+        if(!acc.includes(language)){
+            acc.push(language);
+        }
+    });
+    return acc;
+}, []);
+
+console.log(uniqueLanguages);
 
 
 const smashers = ["Mario", "Donkey Kong", "Link", "Samus","Dark Samus", "Yoshi", "Kirby", "Fox", "Pikachu", "Luigi", "Ness", "Captain Falcon", "Jigglypuff",     "Peach", "Daisy", "Bowser", "Ice Climbers", "Sheik", "Zelda", "Dr. Mario", "Pichu", "Falco", "Marth", "Lucina", "Young Link", "Ganondorf", "Mewtwo", "Roy", "Chrom", "Mr. Game & Watch", "Meta Knight", "Pit", "Dark Pit", "Zero Suit Samus", "Wario", "Snake", "Ike", "Pokemon Trainer", "Squirtle", "Ivysaur", "Charizard", "Diddy Kong", "Lucas", "Sonic", "King Dedede", "Olimar", "Lucario", "R.O.B.", "Toon Link", "Wolf", "Villager", "Mega Man", "Wii Fit Trainer", "Rosalina & Luma", "Little Mac", "Greninja", "Mii Brawler", "Mii Swordfighter", "Mii Gunner", "Palutena", "Pac-Man", "Robin", "Shulk", "Bowser Jr.", "Duck Hunt", "Ryu", "Ken", "Cloud", "Corrin", "Bayonetta", "Inkling", "Ridley", "Simon", "Richter", "King K. Rool", "Isabelle", "Incineroar", "Piranha Plant", "Joker", "Hero", "Banjo & Kazooie", "Terry", "Byleth", "Min Min", "Steve", "Sephiroth", "Pyra", "Mythra", "Kazuya", "Sora"];
@@ -199,11 +267,45 @@ const aHundredNums = [9225, 6397, 97, 5062, 2149, 4656, 6551, 2145, 1073, 7963, 
 
 //TODO: Find the total and average of the array of a hundred numbers.
 
-const totalAndAvg = aHundredNums.reduce((total, index, array)=>{
-    total = (index += aHundredNums.length);
-    if(index === array.length -1){
-        return parseFloat(total/array.length).toFixed(0);
+
+const total = aHundredNums.reduce((accumulator, currentValue, index)=>{
+    // console.log(`At ${index} the accumulator is ${accumulator} and the current value is ${currentValue}`);
+    return accumulator + currentValue;
+});
+
+
+const average = aHundredNums.reduce((acc, curr, index , array)=>{
+    acc =acc + curr;
+    if (index === array.length -1){
+        return acc/array.length;
     }else{
-        return total;
+        return acc;
     }
-})
+});
+
+const totalOfOdds = aHundredNums.reduce((accumulator, currentValue, index)=>{
+    if (index % 2 === 1){
+        return accumulator + currentValue;
+    }else{
+        return accumulator;
+    }
+});
+
+/** WHEN MANIPULATING VALUES WITHIN OBJECTS - needs a starting point **/
+
+const valueOfCars = cars.reduce((acc, car)=>{
+    return acc + car.price},
+    0
+);
+
+const totalMileage = cars.reduce((acc, car)=>{
+    return acc + car.mileage},
+    0
+);
+
+/** This creates an array of the  mileages using reduce, but the same can be done with .map **/
+
+const carMileages = cars.reduce((acc, car)=>{
+    acc.push(car.mileage);
+    return acc;
+}, []);
