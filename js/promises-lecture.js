@@ -1,4 +1,4 @@
-import {getGitHubUsers, renderGitHubUser, getGitHubUser, getGitHubEvents, getLastCommit} from "./github.js";
+import {getGitHubUsers, renderGitHubUser, getGitHubUser, getGitHubEvents, getLastCommit} from "./promises.js";
 
 
 (async ()=>{

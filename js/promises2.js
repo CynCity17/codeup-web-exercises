@@ -27,7 +27,7 @@ import {getFilms, getPerson, getPlanet} from "./starwars.js";
     let person = await getPerson(35);
     console.log(person.eye_color);
 
-    let chosenfilm = await getFilms(5);
-    console.log(chosenfilm);
+    let chosenFilm = await getFilms(5);
+    console.log(chosenFilm);
 
 })();
