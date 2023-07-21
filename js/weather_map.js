@@ -1,4 +1,5 @@
 import keys from './keys.js';
+import {formatTime, windCardinalDirection, appendLeadingZeroes, dateFromTimeStamp, namedDayFromDay, dayOfWeekFromDayAbbreviated, mostFrequent, average} from './weather_utils';
 
 const currentWeatherItemsE1 = document.querySelector('#current-weather-items');
 const timezone = document.querySelector('.time-zone');
