@@ -58,19 +58,22 @@ body{
 
 
 
- .others{
-    display: flex;
+.others{
     flex-direction: column;
     background: rgba(24,24,27,0.6);
     padding: 20px;
     border-radius: 10px;
     margin: 10px 0;
-    max-width: 250px;
-     border: 1px solid white;
+    max-width: 350px;
+    border: 1px solid white;
 }
 
 .weather-item div{
     display: inline-block;
+}
+
+.feelsLike{
+    margin-right: 113px;
 }
 
 .humidity{
@@ -78,11 +81,11 @@ body{
 }
 
 .pressure{
-    margin-right: 138px;
+    margin-right: 121px;
 }
 
 .windSpeed{
-    margin-right: 94px;
+    margin-right: 102px;
 }
 
 .future-forecast .row{

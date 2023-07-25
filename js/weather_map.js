@@ -1,5 +1,18 @@
 import keys from './keys.js';
-import {formatTime, windCardinalDirection, appendLeadingZeroes, dateFromTimeStamp, namedDayFromDay, dayOfWeekFromDayAbbreviated, mostFrequent, average} from './weather_utils';
+import {
+    formatTime,
+    months,
+    daysOfWeek,
+    daysOfWeekAbbreviated,
+    windCardinalDirection,
+    appendLeadingZeroes,
+    dateFromTimeStamp,
+    namedDayFromDay,
+    dayOfWeekFromDayAbbreviated,
+    mostFrequent,
+    average,
+} from './weather_utils.js';
+
 
 const currentWeatherItemsE1 = document.querySelector('#current-weather-items');
 const timezone = document.querySelector('.time-zone');
@@ -23,11 +36,12 @@ function setFiveDayForecast(forecasts) {
     target.innerHTML = '';
 
     forecasts.forEach((day) => {
+        console.log(day);
         const node = document.createElement('div');
         node.classList.add('weather-forecast');
         node.innerHTML = `
       <div class="weather-forecast-item">
-        <div class="day">${day.dt_txt}</div>
+        <div class="day">${day.dt}</div>
         <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="weather icon" class="w-icon">
         <div class="text">Humidity - ${day.main.humidity}</div>
         <div class="text">Feels Like - ${day.main.feels_like}&#8457;</div>

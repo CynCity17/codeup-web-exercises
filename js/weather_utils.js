@@ -46,7 +46,7 @@ export function appendLeadingZeroes(n){
     return n;
 }
 
-const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+export const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
 export function formatTime(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
@@ -55,8 +55,9 @@ export function formatTime(timeStamp){
     let day = dateTime.getDate();
     let hour = appendLeadingZeroes(dateTime.getHours());
     let minutes = appendLeadingZeroes(dateTime.getMinutes());
-    let seconds = appendLeadingZeroes(dateTime.getSeconds());
-    return month + " " + day + " " + year + " " + hour + ":" + minutes + ":" + seconds;
+    // let seconds = appendLeadingZeroes(dateTime.getSeconds());
+    return month + " " + day + " " + year + " " + hour + ":" + minutes;
+    // + ":" + seconds;
 }
 
 export function dateFromTimeStamp(timeStamp){
@@ -67,9 +68,9 @@ export function dateFromTimeStamp(timeStamp){
     return `${year}-${month}-${day}`;
 }
 
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const daysOfWeekAbbreviated = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export const daysOfWeekAbbreviated = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export function namedDayFromDay(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
