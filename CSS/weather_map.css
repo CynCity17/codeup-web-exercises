@@ -56,16 +56,13 @@ body{
     font-weight: 700;
 }
 
-
-
 .others{
-    flex-direction: column;
     background: rgba(24,24,27,0.6);
     padding: 20px;
     border-radius: 10px;
     margin: 10px 0;
     max-width: 350px;
-    border: 1px solid white;
+    border: 5px solid white;
 }
 
 .weather-item div{
@@ -86,6 +83,14 @@ body{
 
 .windSpeed{
     margin-right: 102px;
+}
+
+.sunrise{
+    margin-right: 128px;
+}
+
+.sunset{
+    margin-right: 132px;
 }
 
 .future-forecast .row{

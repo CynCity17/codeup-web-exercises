@@ -13,30 +13,32 @@
 <div class="page-wrapper">
     <div class="header-container">
         <div class="row">
-            <div class="current-weather column">
-                <div class="date-container">
-                    <div class="time" id="time">
-                        <span id="am-pm">pm</span>
+            <div class="d-flex justify-space-between current-weather column">
+                <div class="d-flex date-container">
+                    <div class="date-time column">
+                        <div class="time" id="time">
+                            <span id="am-pm">pm</span>
+                        </div>
+                        <div class="date" id="date"></div>
                     </div>
-                    <div class="date" id="date"></div>
-
-                    <div class="d-flex justify-center others" id="current-weather-items">
-
-
-<!--// --------THIS IS WHERE CURRENT ITEMS SHOULD POPULATE---------//-->
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="place-container">
-                <div class="row">
-                    <div class="column">
+                    <div class="zone column">
                         <div class="time-zone" id="time-zone">CST</div>
                         <div id="country" class="country">US</div>
                     </div>
                 </div>
+
+                <div class="d-flex justify-center current-weather-data">
+                    <div class="d-flex justify-center others" id="current-weather-items">
+
+
+    <!--// --------THIS IS WHERE CURRENT ITEMS SHOULD POPULATE---------//-->
+
+
+                    </div>
+                </div>
             </div>
+
+
         </div>
     </div>
 
