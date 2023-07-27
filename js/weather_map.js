@@ -39,9 +39,13 @@ function setFiveDayForecast(forecasts) {
         console.log(day);
         const node = document.createElement('div');
         node.classList.add('weather-forecast');
+
+        const date = new Date(day.dt * 1000);
+        const dayOfWeek = namedDayFromDay(day.dt);
+
         node.innerHTML = `
       <div class="weather-forecast-item">
-        <div class="day">${day.dt}</div>
+        <div class="day">${dayOfWeek}</div>
         <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="weather icon" class="w-icon">
         <div class="text">Humidity - ${day.main.humidity}</div>
         <div class="text">Feels Like - ${day.main.feels_like}&#8457;</div>
@@ -70,6 +74,12 @@ function setCurrentWeather(forecast) {
 
     const node = document.createElement('div');
     node.classList.add('c-weather-item');
+
+    const sunriseTimeUTC = new Date(forecast.sys.sunrise * 1000);
+    const sunsetTimeUTC = new Date(forecast.sys.sunset * 1000);
+    const sunriseTimeLocal = sunriseTimeUTC.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', hour12: true, hourCycle: 'h23'});
+    const sunsetTimeLocal = sunsetTimeUTC.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', hour12: true, hourCycle: 'h23'});
+
     node.innerHTML = `
     <div class="weather-item">
       <div class="feelsLike">Feels Like</div>
@@ -89,11 +99,11 @@ function setCurrentWeather(forecast) {
     </div>
     <div class="weather-item">
       <div class="sunrise">Sunrise</div>
-      <div>${formatTime(forecast.sys.sunrise)}</div>
+      <div>${sunriseTimeLocal}</div>
     </div>
     <div class="weather-item">
       <div class="sunset">Sunset</div>
-      <div>${formatTime(forecast.sys.sunset)}</div>
+      <div>${sunsetTimeLocal}</div>
     </div>
   `;
 
